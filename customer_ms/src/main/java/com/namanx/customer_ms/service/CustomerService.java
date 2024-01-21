@@ -2,10 +2,11 @@ package com.namanx.customer_ms.service;
 
 import com.namanx.customer_ms.model.dto.request.CustomerRegistrationRequest;
 import com.namanx.customer_ms.model.entity.Customer;
+import com.namanx.customer_ms.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public record CustomerService() {
+public record CustomerService(CustomerRepository customerRepository) {
 
     public void registerCustomer(CustomerRegistrationRequest request) {
 
@@ -17,6 +18,6 @@ public record CustomerService() {
 
         // todo: check if email is valid
         // todo: check if email is not taken
-        // todo: store customer in database
+        customerRepository.save(customer);
     }
 }
