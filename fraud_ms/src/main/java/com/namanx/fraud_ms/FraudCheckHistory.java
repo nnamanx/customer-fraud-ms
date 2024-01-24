@@ -13,4 +13,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 public class FraudCheckHistory {
+
+    
 }
