@@ -16,7 +16,7 @@ public record CustomerController(CustomerService customerService) {
     @PostMapping
     public void registerCustomer(@RequestBody CustomerRegistrationRequest customerRequest) {
 
-        //checking if the commit is shown in the github
+//        1 1 is this me?
         log.info("New customer registration {} ", customerRequest);
         customerService.registerCustomer(customerRequest);
 
