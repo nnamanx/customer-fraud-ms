@@ -16,7 +16,7 @@ public record CustomerController(CustomerService customerService) {
     @PostMapping
     public void registerCustomer(@RequestBody CustomerRegistrationRequest customerRequest) {
 
-//        1 1 is this me?
+//       i think that is me?
         log.info("New customer registration {} ", customerRequest);
         customerService.registerCustomer(customerRequest);
 
